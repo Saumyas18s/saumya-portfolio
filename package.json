@@ -2,7 +2,7 @@
   "name": "saumya-portfolio",
   "version": "1.0.0",
   "description": "Personal portfolio website for Saumya Singh - AI & ML Engineering Student",
-  "homepage": "https://github.com/Saumyas18s/saumya-portfolio.git",
+  "homepage": "https://github.com/Saumyas18s/saumya-portfoli.netlify.app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
