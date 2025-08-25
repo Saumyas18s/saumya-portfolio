@@ -4,24 +4,26 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#667eea" />
+    <meta name="theme-color" content="#8b5cf6" />
     <meta name="description" content="Saumya Singh - AI & ML Engineering Student. Passionate about full-stack development, machine learning, and creating innovative solutions." />
     <meta name="keywords" content="Saumya Singh, AI, Machine Learning, React Developer, Full Stack, Python, Web Development, Portfolio" />
-    <meta name="author" content="SS" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />   
+    <meta name="author" content="Saumya Singh" />
     
-    <!-- Open Graph Meta Tags -->
+    <!-- Open Graph Meta Tags - Updated for Netlify -->
     <meta property="og:title" content="Saumya Singh - AI & ML Engineering Student" />
     <meta property="og:description" content="Portfolio showcasing projects in AI/ML, web development, and software engineering." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://saumyas18s.github.io/saumya-portfolio" />
+    <meta property="og:url" content="https://saumya-portfoli.netlify.app" />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Saumya Singh - AI & ML Engineering Student" />
     <meta name="twitter:description" content="Portfolio showcasing projects in AI/ML, web development, and software engineering." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.png" />
     
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -29,10 +31,20 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+    <!-- Preconnect for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <title>Saumya Singh - AI & ML Engineering Student | Portfolio</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      You need to enable JavaScript to run this app.
+      <div style="text-align: center; margin-top: 50px;">
+        <h2>Please enable JavaScript</h2>
+        <p>This portfolio website requires JavaScript to function properly.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
   </body>
 </html>
