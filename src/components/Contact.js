@@ -11,12 +11,11 @@ const Contact = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing] = useState(false);
 
   // Editable content state
   const [content, setContent] = useState({
     title: "Get in Touch",
-  
     description: "If you have any inquiries or just want to say hi, please use the contact form!",
     email: "saumyasingh62552@gmail.com"
   });
@@ -154,20 +153,16 @@ const Contact = () => {
               </div>
 
               <div className="social-links">
-              <a href="https://github.com/Saumyas18s" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-github"></i>
-              </a>
-              <a href="https://linkedin.com/in/saumya-singh-ss121825/" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-linkedin"></i>
-              </a>
-              {/* <a href="mailto:saumyasingh62552@gmail.com">
-                <i className="fas fa-envelope"></i>
-              </a> */}
-              <a href="https://www.instagram.com/toon.trendz/" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram"></i>
-              
-              </a>
-            </div>
+                <a href="https://github.com/Saumyas18s" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/saumya-singh-ss121825/" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/toon.trendz/" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-instagram"></i>
+                </a>
+              </div>
             </div>
           </div>
 
