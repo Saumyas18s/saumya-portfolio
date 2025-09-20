@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import './Header.css';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -14,41 +14,113 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Toggle mobile menu
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Close menu when clicking on a link
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Smooth scroll to section
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
-    setIsMobileMenuOpen(false);
+    closeMenu();
   };
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
-        <div className="nav-content">
+        <nav className="nav">
+          {/* Logo */}
           <div className="logo">
-            <h1>SS</h1>
+            <a 
+              href="#home" 
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('home');
+              }}
+            >
+              Saumya Singh
+            </a>
           </div>
-          
-          <nav className={`nav ${isMobileMenuOpen ? 'nav-open' : ''}`}>
-            <ul>
-              <li><a href="#home" onClick={() => scrollToSection('home')}>Home</a></li>
-              <li><a href="#skills" onClick={() => scrollToSection('skills')}>Skills</a></li>
-              <li><a href="#projects" onClick={() => scrollToSection('projects')}>Projects</a></li>
-              <li><a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a></li>
-               <li><a href="https://drive.google.com/file/d/1SlSXSwpfHNu4X2svbx9C3-BcE1Z_QFKy/view?usp=sharing">Resume</a></li>
-            </ul>
-          </nav>
 
+          {/* Desktop Navigation */}
+          <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+            <li>
+              <a 
+                href="#home"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('home');
+                }}
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#about"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('about');
+                }}
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#skills"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('skills');
+                }}
+              >
+                Skills
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#projects"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('projects');
+                }}
+              >
+                Projects
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('contact');
+                }}
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+
+          {/* Mobile Menu Button */}
           <button 
             className="mobile-menu-btn"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={toggleMenu}
+            aria-label="Toggle mobile menu"
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
           </button>
-        </div>
+        </nav>
       </div>
     </header>
   );
