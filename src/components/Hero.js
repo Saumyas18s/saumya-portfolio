@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './Hero.css';
 import profileImage from './profile.jpg';
 
-// Import Contact component
-import Contact from './Contact';
 
 // Smooth scroll utility function
 const scrollToSection = (sectionId) => {
