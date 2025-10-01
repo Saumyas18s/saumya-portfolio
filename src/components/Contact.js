@@ -92,11 +92,12 @@ const Contact = () => {
                 <input name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange}/>
               </label>
 
-              <label className="input-group textarea">
+
+             <label className="input-group textarea">
                 <span className="input-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" width="20" height="20"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z" fill="currentColor"/></svg>
                 </span>
-                <textarea name="message" placeholder="Message" rows="6" value={formData.message} onChange={handleChange} required/>
+                <textarea name="message" placeholder="Message" rows="12" value={formData.message} onChange={handleChange} required/>
               </label>
 
               <button type="submit" className={`submit-btn ${isSubmitting ? 'is-loading' : ''}`} disabled={isSubmitting}>
@@ -115,4 +116,5 @@ const Contact = () => {
     </section>
   );
 };
-export default Contact;
+
+export default Contact; 
