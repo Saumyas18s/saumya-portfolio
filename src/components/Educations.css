@@ -1,0 +1,276 @@
+/* Education Section Styles - Modern Card Layout */
+.education-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+  position: relative;
+}
+
+.education-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Header Styles */
+.education-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #1a202c;
+  margin-bottom: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.section-title i {
+  color: #7c3aed; /* keep if you like the title accent; change if needed */
+  font-size: 2.2rem;
+}
+
+/* Cards Layout */
+.education-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.education-card-modern {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  /* neutral border (removed purple tint) */
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  animation: slideInUp 0.8s ease-out;
+  display: flex;
+  min-height: 200px;
+}
+
+.education-card-modern:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Image Container - Left Side */
+.education-image-container {
+  position: relative;
+  width: 250px;
+  min-width: 250px;
+  height: auto;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f1f5f9; /* neutral bg so no purple when image missing */
+}
+
+.education-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  filter: brightness(1.05) contrast(1.05);
+}
+
+.education-card-modern:hover .education-image {
+  transform: scale(1.06);
+  filter: brightness(1.1) contrast(1.08);
+}
+
+
+
+/* Duration badge – move to a small corner chip on the image */
+.education-duration-badge {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a202c;
+  padding: 8px 14px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+}
+
+/* Content Styles - Right Side */
+.education-content-modern {
+  flex: 1;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.education-main-info {
+  margin-bottom: 20px;
+}
+
+.education-degree-modern {
+  font-size: 1.4rem;
+  color: #1a202c;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.education-field-modern {
+  font-size: 1rem;
+  color: #4f46e5; /* subtle indigo; tweak or neutralize if you want */
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  opacity: 0.95;
+}
+
+.education-institution-info {
+  margin-bottom: 20px;
+}
+
+.institution-name,
+.institution-location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+.institution-name {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.institution-name i {
+  color: #6366f1;
+  width: 16px;
+}
+
+.education-grade-modern {
+  margin-bottom: 15px;
+}
+
+.grade-badge {
+  color: #111827;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.18);
+  display: inline-block;
+  background: #ecfdf5;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.education-description-modern {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 968px) {
+  .education-card-modern {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .education-image-container {
+    width: 100%;
+    height: 200px;
+    min-width: auto;
+  }
+
+  .education-content-modern {
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .education-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section-title i {
+    font-size: 1.8rem;
+  }
+
+  .education-cards {
+    gap: 30px;
+  }
+
+  .education-image-container {
+    height: 180px;
+  }
+
+  .education-degree-modern {
+    font-size: 1.2rem;
+  }
+
+  .education-field-modern {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .education-section {
+    padding: 40px 0;
+  }
+
+  .education-section .container {
+    padding: 0 15px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .education-content-modern {
+    padding: 20px;
+  }
+
+  .education-degree-modern {
+    font-size: 1.1rem;
+  }
+
+  .education-image-container {
+    height: 150px;
+  }
+
+  .education-duration-badge {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .institution-name,
+  .institution-location {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Loading state for images */
+.education-image:not([src]), .education-image[src=""] { display: none; }
