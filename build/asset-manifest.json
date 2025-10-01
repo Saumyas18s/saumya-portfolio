@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Saumyas18s/saumya-portfolio.git/static/css/main.93099ce3.css",
+    "main.js": "/Saumyas18s/saumya-portfolio.git/static/js/main.ca7f4fe2.js",
+    "static/media/profile.jpg": "/Saumyas18s/saumya-portfolio.git/static/media/profile.77e4fda4f15266c50fe3.jpg",
+    "static/media/psit-college.jpg": "/Saumyas18s/saumya-portfolio.git/static/media/psit-college.f32a2122a49ee31a6443.jpg",
+    "static/media/school-building.jpg": "/Saumyas18s/saumya-portfolio.git/static/media/school-building.cdd0564c3ef3daf00c35.jpg",
+    "index.html": "/Saumyas18s/saumya-portfolio.git/index.html",
+    "main.93099ce3.css.map": "/Saumyas18s/saumya-portfolio.git/static/css/main.93099ce3.css.map",
+    "main.ca7f4fe2.js.map": "/Saumyas18s/saumya-portfolio.git/static/js/main.ca7f4fe2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93099ce3.css",
+    "static/js/main.ca7f4fe2.js"
+  ]
+}
