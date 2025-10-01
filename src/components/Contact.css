@@ -1,10 +1,13 @@
-.contact-section .contact-title {
+/* Section wrapper */
+.contact-section {
   position: relative;
-  display: inline-block;
-  margin-bottom: 12px; /* space between text and underline */
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.15;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 19px 80px;
+  background: linear-gradient(135deg, #eaf2ff 0%, #dbe4ff 100%);
+  overflow: hidden;
 }
 .contact-section .contact-title::after {
   content: "";
