@@ -19,7 +19,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'skills', 'projects', 'education', 'contact'];
+      const sections = ['home', 'skills', 'experience', 'projects', 'education', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const sectionId of sections) {
@@ -43,7 +43,7 @@ const Navigation = () => {
       <div className="nav-container">
         <div className="nav-logo">SS|Saumya's Portfolio</div>
         <ul className="nav-menu">
-          {['home', 'skills', 'projects', 'education', 'contact'].map((section) => (
+          {['home', 'skills', 'experience', 'projects', 'education', 'contact'].map((section) => (
             <li key={section}>
               <button
                 onClick={() => scrollToSection(section)}
